@@ -27,6 +27,17 @@ scissors = '''
       (____)
 ---.__(___)
 '''
+try:
+    user_choice = int(input("What do you want to choose? Type 0 for Rock, 1 for Paper and 2 for Scissors\n"))
+except ValueError:
+    print("Invalid input, please enter a number between 0 and 2")
+    exit()
+
+# Validate input
+if user_choice not in [0, 1, 2]:
+    print("Invalid choice, please choose between 0, 1, and 2.")
+    
+
 user_choice = int(input("What do you want to choose? Type 0 for Rock, 1 for Paper and 2 for Scissors\n"))
 
 computer_choice = random.randint(0,2)
